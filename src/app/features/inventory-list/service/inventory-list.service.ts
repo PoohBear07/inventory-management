@@ -6,9 +6,9 @@ import { InventoryItem } from '../model/inventory-item.model';
 })
 export class InventoryService {
 private inventory: InventoryItem[] = [
-    { id: 1, name: 'Item 1', description: 'This is item 1', quantity: 10, price: 9.99 },
-    { id: 2, name: 'Item 2', description: 'This is item 2', quantity: 20, price: 19.99 },
-    { id: 3, name: 'Item 3', description: 'This is item 3', quantity: 30, price: 29.99 },
+    {  itemName: 'Item 1', itemDescription: 'This is item 1',  itemPrice: 9.99 },
+    {  itemName: 'Item 2', itemDescription: 'This is item 2',  itemPrice: 19.99 },
+    {  itemName: 'Item 3', itemDescription: 'This is item 3',  itemPrice: 29.99 },
   ];
 
   constructor() { }
@@ -17,5 +17,8 @@ private inventory: InventoryItem[] = [
     return this.inventory;
   }
 
-
+ addItem(item:InventoryItem) {
+    this.inventory.push({itemName: item.itemName, itemDescription: item.itemDescription,itemPrice: item.itemPrice});
+  console.log(this.inventory);
+  }
 }

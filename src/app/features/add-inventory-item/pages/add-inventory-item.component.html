@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Add inventory Item</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<form   (ngSubmit)="onSubmit()">
+  <div>
+    <label for="itemName">Name:</label>
+    <input type="text" id="itemName" name="itemName" [(ngModel)]="item.itemName" required>
+  </div>
+
+  <div>
+    <label for="itemDescription">Description:</label>
+    <input type="text" id="itemDescription" name="itemDescription" [(ngModel)]="item.itemDescription" required>
+  </div>
+
+  <div>
+    <label for="itemPrice">Price:</label>
+    <input type="number" id="itemPrice" name="itemPrice" [(ngModel)]="item.itemPrice" required>
+  </div>
+
+  <button type="submit" >Submit</button>
+</form>
+
+<app-inventory-list></app-inventory-list>
+</body>
+</html>
